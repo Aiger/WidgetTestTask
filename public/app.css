@@ -1,0 +1,100 @@
+html,
+body,
+.app {
+    height: 100%;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.4;
+}
+
+.app {
+    display: flex;
+}
+.app__control {
+    flex: none;
+    order: 1;
+    width: 400px;
+    max-width: 40%;
+    border: solid 0 #e4e4e4;
+    border-left-width: 1px;
+    background: #f5f5f5;
+    overflow: auto;
+    font-size: 13px;
+}
+.app__content {
+    flex: auto;
+    order: 0;
+    overflow: auto;
+}
+.app__content-error {
+    font-size: 20px;
+    padding: 15px 20px;
+    white-space: pre-wrap;
+}
+
+@media (max-width: 680px) {
+    .app {
+        display: block;
+    }
+    .app__control {
+        width: auto;
+        max-width: none;
+        border-left-width: 0;
+        border-bottom-width: 1px;
+    }
+}
+
+.app__control-section {
+    border-top: solid 1px #e4e4e4;
+    padding: 15px;
+}
+.app__control-section:first-child {
+    border-top: none;
+}
+.app__control-section-title {
+    font-size: 85%;
+    text-transform: uppercase;
+    color: #777;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.app__setting {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.app__setting > * {
+    flex: 1;
+    margin: 0 0 0 10px;
+    width: 0;
+}
+.app__setting > :first-child {
+    margin-left: 0;
+}
+.app__settings-button {
+    margin: 10px 0 0;
+}
+
+.app__colors-list > * {
+    display: block;
+    margin-top: 0.3em;
+}
+.app__colors-list > :first-child {
+    margin-top: 0;
+}
+
+.app__widget-output_error {
+    color: red;
+}
+
+.widget-padding,
+.enforce-selector .widget-padding,
+.enforce-selector .enforce-selector .widget-padding {
+    padding: 15px 20px;
+}
