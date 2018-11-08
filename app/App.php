@@ -70,7 +70,7 @@ class App
             return;
         }
 
-        echo $this->renderer->fetch('app/view.php', compact('widgetConfig', 'widgetRender'));
+        echo $this->renderer->fetch($template, compact('widgetConfig', 'widgetRender'));
     }
 
     /**

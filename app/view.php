@@ -52,7 +52,7 @@ $widgetRender = $widgetRender ?? null;
           ?>
           <button class="app__settings-button">Применить</button>
         </form>
-        <div class="app__control-section" id="envConfig">
+        <div class="app__control-section" id="appConfig">
           <div class="app__control-section-title">Настройки окружения</div>
           <label class="app__setting">
             <span>Размер шрифта</span>
@@ -63,7 +63,7 @@ $widgetRender = $widgetRender ?? null;
             <div class="app__colors-list"></div>
           </div>
         </div>
-      <div class="app__control-section" id="envConfig">
+      <div class="app__control-section">
           <div class="app__control-section-title">Обратная связь виджета</div>
           <pre class="app__widget-output"></pre>
       </div>

@@ -70,7 +70,7 @@
         var style = document.createElement('style');
         style.textContent = colorSets
             .map(function (colorSet, index) {
-                var className = 'env__colorSet-' + Math.trunc(Math.random() * 100000);
+                var className = 'app__colorSet-' + Math.trunc(Math.random() * 100000);
                 classNames[index] = className;
 
                 return Object.keys(colorSet.colors)
@@ -94,7 +94,7 @@
 
     function livenFontSizeInput() {
         var fontSizeTarget = document.body;
-        var inputElement = document.querySelector('#envConfig input[name="fontSize"]');
+        var inputElement = document.querySelector('#appConfig input[name="fontSize"]');
 
         function handleChange() {
             fontSizeTarget.style.fontSize = inputElement.value + 'px';
@@ -106,7 +106,7 @@
 
     function livenColorSelect(colorSets) {
         var colorSetTarget = document.body;
-        var colorsListElement = document.querySelector('#envConfig .app__colors-list');
+        var colorsListElement = document.querySelector('#appConfig .app__colors-list');
         var colorSetClasses = installColorSets(colorSets);
         var currentColorSetIndex;
 
