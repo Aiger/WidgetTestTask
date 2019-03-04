@@ -109,6 +109,7 @@
         var colorsListElement = document.querySelector('#appConfig .app__colors-list');
         var colorSetClasses = installColorSets(colorSets);
         var currentColorSetIndex;
+        var initialColorSetIndex = 0;
 
         function applyColorSet(index) {
             if (index === currentColorSetIndex) {
@@ -130,7 +131,7 @@
             colorRadioButton.type = 'radio';
             colorRadioButton.name = 'colorSet';
             colorRadioButton.value = index;
-            colorRadioButton.checked = index === 0;
+            colorRadioButton.checked = index === initialColorSetIndex;
             colorRadioButton.addEventListener('change', applyColorSet.bind(null, index));
 
             var listItemElement = document.createElement('label');
@@ -138,6 +139,8 @@
             listItemElement.appendChild(document.createTextNode(' ' + colorSet.name));
             colorsListElement.appendChild(listItemElement);
         });
+
+        applyColorSet(initialColorSetIndex);
     }
 
     function livenWidgetOutput() {
